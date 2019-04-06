@@ -3,7 +3,7 @@ const User = require('../../models/user');
 module.exports = function (router) {
 
     // GET - Retrieve USERs
-    router.get('/user', function (req, res) {
+    router.get('/users', function (req, res) {
 
         User.find().sort({ name: 1 }).exec()
             .then(users => res.status(200).json(users))
