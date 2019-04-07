@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { UserService } from '../../routes/user.service';
+import { User } from '../../models/user';
 
 @Component({
   selector: 'app-home',
@@ -9,7 +10,11 @@ import { UserService } from '../../routes/user.service';
 })
 export class HomeComponent implements OnInit {
 
-  constructor(private userService: UserService) { }
+  users: User[];
+
+  constructor(private userService: UserService) {
+
+  }
 
   ngOnInit() {
     this.getUsersAndLog();
@@ -20,7 +25,6 @@ export class HomeComponent implements OnInit {
     console.log('hit app-home');
 
     this.userService.getUsers()
-      .subscribe(result => console.log(result));
+      .subscribe(result => (this.users = result, console.log(this.users)));
   }
-
 }
