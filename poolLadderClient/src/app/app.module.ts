@@ -10,7 +10,6 @@ import { AddUserComponent } from './components/add-user/add-user.component';
 import { ScheduleGameComponent } from './components/schedule-game/schedule-game.component';
 import { MaterialModule } from './material/material.module';
 
-
 @NgModule({
   declarations: [
     AppComponent,
