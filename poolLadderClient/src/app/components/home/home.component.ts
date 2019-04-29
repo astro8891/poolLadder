@@ -18,6 +18,7 @@ export class HomeComponent implements OnInit {
 
   ngOnInit() {
     this.getUsersAndLog();
+    console.log('hit');
   }
 
   getUsersAndLog() {
