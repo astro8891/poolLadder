@@ -1,0 +1,13 @@
+<mat-sidenav-container class="app-sidenav-container">
+
+    <mat-sidenav class="app-sidenav" #sidenav mode="side" [(opened)]="opened" (opened)="events.push('open!')"
+                 (closed)="events.push('close!')">
+      Sidenav content
+    </mat-sidenav>
+  
+    <mat-sidenav-content class="app-sidenav-content">
+      <app-toolbar></app-toolbar>      
+      <p><button mat-button (click)="sidenav.toggle()">sidenavS</button></p>     
+    </mat-sidenav-content>
+
+  </mat-sidenav-container>
