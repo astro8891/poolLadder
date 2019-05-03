@@ -1,13 +1,14 @@
 <mat-sidenav-container class="app-sidenav-container">
 
-    <mat-sidenav class="app-sidenav" #sidenav mode="side" [(opened)]="opened" (opened)="events.push('open!')"
-                 (closed)="events.push('close!')">
-      Sidenav content
-    </mat-sidenav>
-  
-    <mat-sidenav-content class="app-sidenav-content">
-      <app-toolbar></app-toolbar>      
-      <p><button mat-button (click)="sidenav.toggle()">sidenavS</button></p>     
-    </mat-sidenav-content>
+  <mat-sidenav class="app-sidenav" #sidenav mode="side" [(opened)]="opened" (opened)="events.push('open!')">
+  <mat-toolbar color='primary'>Home</mat-toolbar>
+  <mat-toolbar>Schedule Game</mat-toolbar>
+  <mat-toolbar>Add User</mat-toolbar>
+  </mat-sidenav>
 
-  </mat-sidenav-container>
+  <mat-sidenav-content class="app-sidenav-content">
+    <!-- Toolbar -->
+    <app-toolbar (click)="sidenav.toggle()"></app-toolbar>    
+  </mat-sidenav-content>
+
+</mat-sidenav-container>
